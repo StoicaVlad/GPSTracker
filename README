@@ -1,0 +1,24 @@
+Stoica Vlad-Marian - 321CB
+
+The dijkstra's algorithm was implemented using an adjancency matrix (sort of).
+I created a class of Nodes which has an array of Streets (a street represents
+an edge from that node to another one).
+The class for a street (Strada) also has an array of restrictions (Ambuteiaje)
+so that a street can have different restrictions which affects the way a
+vehicle can pass through it or not.
+The class for restrictions (Ambuteiaj) has a type and a cost.
+Every class has constructors, getters and setters for their private members.
+A class named Autovehicul was created for every mean of transportation, which
+has a type, a weight and a cost. The other means of transportation (Bicicleta,
+Motocicleta,Autoturism,Camion) extend the Autovehicul class, showing the
+inheritance, and each of them has a specific value for the variables.
+The class CaleScurta is where the dijkstra's algorithm is implemented.
+It creates an array of distances from the root node to all the other ones. It
+finds the node with the lowest cost in that array, and checks the conditions
+for the cost and weight. If they are valid, it adds the cost of it's edges to
+the dist array. The process repreats for every node in the array. After,
+it prints the path from the root node to the destination node and the total
+cost of that...or null if that type of vehicle cannot go to it,or if there
+isn't a path between those nodes.
+Main class is where the code is tested. The input is recieved from a map.in
+file and the path is written to the map.out file.
